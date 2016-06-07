@@ -54,7 +54,6 @@ var WDUIView = cc.Sprite.extend({
 });
 
 
-
 var WDUIEightImmortalMain = WDUIView.extend({
     ctor : function() {
         this._super();
@@ -67,7 +66,6 @@ var WDUIEightImmortalMain = WDUIView.extend({
         middleBg.setAnchorPoint(0.5, 0.5);
         middleBg.setPosition(this.getWidth() * 0.5, this.getHeight() * 0.5);
         this.addChild(middleBg);
-        this._middleBg = middleBg;
 
         for (var i = 0; i < 8; i++) {
             var item = new WDUIEightImmortalRoleItem();
@@ -78,8 +76,6 @@ var WDUIEightImmortalMain = WDUIView.extend({
         }
 
     },
-
-    _middleBg: null,
 
 });
 
@@ -98,7 +94,6 @@ var WDUIEightImmortalRoleItem = cc.Sprite.extend({
         //roleImg.bindClick(this.eventRole.bind(this));
         //roleImg.setTouchArea(18, 14, 130, 344);
         this.addChild(roleImg);
-        this._roleImg = roleImg;
     },
 
     eventRole: function() {
